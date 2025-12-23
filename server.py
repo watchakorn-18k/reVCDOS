@@ -17,10 +17,16 @@ def request_to_url(request: Request, path: str, base_url = VCSKY_BASE_URL):
 
 async def _proxy_request(request: Request, url: str):
     client = httpx.AsyncClient()
-    headers = {k: v for k, v in request.headers.items() if k.lower() != "host"}
+    headers = {k: v for k, v in request.headers.items() if k.lower() not in ["host", "referer"]}
     req = client.build_request(request.method, url, headers=headers, content=request.stream())
     r = await client.send(req, stream=True)
-    return StreamingResponse(r.aiter_raw(), status_code=r.status_code, headers=r.headers, background=client.aclose)
+    
+    hop_by_hop = ["connection", "keep-alive", "proxy-authenticate", "proxy-authorization",
+                  "te", "trailers", "transfer-encoding", "upgrade", "content-encoding", "content-length"]
+    response_headers = {k: v for k, v in r.headers.items() if k.lower() not in hop_by_hop}
+    
+    return StreamingResponse(r.aiter_raw(), status_code=r.status_code, headers=response_headers, background=client.aclose)
+
 
 @app.api_route("/vcsky/{path:path}", methods=["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"])
 async def vc_sky_proxy(request: Request, path: str):
