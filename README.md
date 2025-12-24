@@ -16,12 +16,14 @@ Web-based port of GTA: Vice City running in browser via WebAssembly.
     ```
 
 2. **Configure Assets** (Optional):
-   The project can use the **DOS.Zone CDN** by default. However, if you want to use local assets:
-   * Download your assets into the `vcsky/{fetched, fetched-ru}/{data/..., audio/..., anim/..., models/...}` and `vcbr/{vc-sky-en-v6.data.br, vc-sky-en-v6.wasm.br, vc-sky-ru-v6.data.br, vc-sky-ru-v6.wasm.br}` directories.
-    
-3. **Launch the Application**:
+
+   By default, the project uses the **DOS Zone CDN**. For local hosting, download and place assets in [(see structure)](#project-structure):
+    *   **Resources:** `vcsky/fetched/` (or `fetched-ru/`) — `data`, `audio`, `anim`, `models` folders.
+    *   **Binaries:** `vcbr/` — `.wasm.br` and `.data.br` files for your chosen language.
+4. **Launch the Application**:
    Choose one of the setup methods below:
    * **Docker** (Recommended for most users) — fast and isolated.
+   * **PHP** — Simply upload the folder to your web server (FTP/Hosting).
    * **Manual Installation** — for development and customization.
 
 ## Setup & Running
