@@ -163,7 +163,7 @@ python server.py --port 3000 --custom_saves --login admin --password secret123 -
 │   ├── vc-sky-en-v6.wasm.br
 │   ├── vc-sky-ru-v6.data.br
 │   └── vc-sky-ru-v6.wasm.br
-└── vcsky/                 # Decompressed assets
+└── vcsky/                 # Decompressed assets (optional)
     ├── fetched/           # English version files
     │   ├── data/
     │   ├── audio/
