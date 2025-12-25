@@ -141,6 +141,7 @@ python server.py --port 3000 --custom_saves --login admin --password secret123 -
 ├── requirements.txt    # Python dependencies
 ├── additions/          # Server extensions
 │   ├── auth.py         # HTTP Basic Auth middleware
+│   ├── cache.py        # Proxy caching and brotli decompression
 │   └── saves.py        # Local saves router
 ├── dist/               # Game client files
 │   ├── index.html      # Main page
