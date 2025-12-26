@@ -237,3 +237,5 @@ Do what you want. Not affiliated with Rockstar Games.
 If you find this project useful:
 
 - **TON / USDT (TON)**  `UQAyBchGEKi9NnNQ3AKMQMuO-SGEhMIAKFAbkwwrsiOPj9Gy`
+- **ETH / USDT (ERC-20)** `0x69Ec02715cF65538Bb03725F03Bd4c85D33F8AC0`
+- **TRX / USDT (TRC-20)** `THgNWT9MGW52tF8qFHbAWN25UR6WTeLDMY`
