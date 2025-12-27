@@ -93,13 +93,47 @@ const translations = {
         configMaxFps: "Макс. FPS:",
         configUnlimited: "(0 = без ограничений)",
     },
+    th: {
+        clickToPlayDemo: "คลิกเพื่อเล่นเดโม",
+        clickToPlayFull: "คลิกเพื่อเล่น",
+        invalidKey: "คีย์ไม่ถูกต้อง",
+        checking: "กำลังตรวจสอบ...",
+        cloudSaves: "การบันทึกบนคลาวด์:",
+        enabled: "เปิดใช้งาน",
+        disabled: "ปิดใช้งาน",
+        playDemoText: "คุณสามารถเล่นเวอร์ชัน DEMO หรือระบุไฟล์เกมต้นฉบับเพื่อเล่นเวอร์ชันเต็ม",
+        disclaimer: "ข้อจำกัดความรับผิดชอบ:",
+        disclaimerSources: "เกมนี้สร้างขึ้นจาก GTA: Vice City เวอร์ชันโอเพ่นซอร์ส ไม่ใช่การเปิดตัวเชิงพาณิชย์และไม่มีความเกี่ยวข้องกับ Rockstar Games",
+        disclaimerCheckbox: "ฉันเป็นเจ้าของเกมต้นฉบับ",
+        disclaimerPrompt: "คุณต้องระบุไฟล์จากเกมต้นฉบับเพื่อยืนยันความเป็นเจ้าของเกมต้นฉบับ",
+        cantContinuePlaying: "คุณไม่สามารถเล่นต่อในเวอร์ชัน DEMO ได้ โปรดระบุไฟล์เกมต้นฉบับเพื่อเล่นต่อ",
+        demoAlert: "เวอร์ชันเดโมมีไว้สำหรับทำความคุ้นเคยกับเทคโนโลยีเกมเท่านั้น ฟีเจอร์ทั้งหมดสามารถใช้งานได้ แต่คุณจะไม่สามารถดำเนินเนื้อเรื่องของเกมได้ โปรดระบุไฟล์เกมต้นฉบับเพื่อเริ่มเวอร์ชันเต็ม",
+        downloading: "กำลังดาวน์โหลด",
+        enterKey: "ป้อนคีย์ของคุณ",
+        clickToContinue: "คลิกเพื่อดำเนินการต่อ...",
+        enterJsDosKey: "ป้อนคีย์ js-dos (5 ตัวอักษร)",
+        portBy: "พอร์ต HTML5 โดย:",
+        ruTranslate: "",
+        demoOffDisclaimer: "เนื่องจากความนิยมของโปรเจกต์ที่สูงเกินคาด ส่งผลให้มีค่าใช้จ่ายด้านทราฟฟิกจำนวนมาก และเพื่อหลีกเลี่ยงความเสี่ยงที่โปรเจกต์จะถูกปิดเนื่องจากการเรียกร้องสิทธิ์ เราจึงปิดการใช้งานเวอร์ชันเดโม คุณยังสามารถเล่นเวอร์ชันเต็มได้โดยการระบุทรัพยากรเกมต้นฉบับ",
+        configLanguage: "ภาษา:",
+        configCheats: "สูตรโกง (F3)",
+        configFullscreen: "เต็มหน้าจอ",
+        configMaxFps: "FPS สูงสุด:",
+        configUnlimited: "(0 = ไม่จำกัด)",
+    },
 };
 
-var currentLanguage = navigator.language.split("-")[0] === "ru" ? "ru" : "en";
+var currentLanguage = "th";
+if (navigator.language.split("-")[0] === "ru") {
+    currentLanguage = "ru";
+}
+
 if (params.get("lang") === "ru") {
     currentLanguage = "ru";
 } else if (params.get("lang") === "en") {
     currentLanguage = "en";
+} else if (params.get("lang") === "th") {
+    currentLanguage = "th";
 }
 
 window.t = function (key) {

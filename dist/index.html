@@ -6,6 +6,9 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <title>Grand Theft Auto: Vice City</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         html {
             background-color: #100a36;
@@ -13,14 +16,18 @@
             cursor: default;
             background-attachment: fixed;
             height: 100%;
+            
+        }
+        *{
+            font-family: 'IBM Plex Sans Thai', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
             min-height: 100%;
             user-select: none;
             margin: 0;
-            color: #8975c3;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f05eb7;
+            font-family: 'IBM Plex Sans Thai', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             background-repeat: no-repeat;
             background-position: 0 100%;
@@ -110,21 +117,21 @@
         .click-to-play button {
             background: none;
             cursor: pointer;
-            border: 2px solid #ff4193;
-            color: #ff4193;
+            border: 2px solid #f05eb7;
+            color: #f05eb7;
             text-transform: uppercase;
             padding: .3em .5em;
             text-decoration: none;
             font-weight: bold;
             border-radius: .7em;
-            box-shadow: inset 0 0 .5em #ff4193aa, 0 0 .75em #ff4193aa;
-            text-shadow: 0 0 5px #ff4193aa, 0 0 1em #ff4193;
+            box-shadow: inset 0 0 .5em #f05eb7, 0 0 .75em #f05eb7;
+            text-shadow: 0 0 5px #f05eb7, 0 0 1em #f05eb7;
             font-size: 2em;
         }
 
         .click-to-play button:hover,
         .click-to-play button:focus {
-            background: #ff4193;
+            background: #f05eb7;
             color: #fff;
             text-shadow: 0 0 5px #fff;
             outline: none;
@@ -183,7 +190,7 @@
         .cover {
             margin: 2em;
             padding: 1em;
-            border: 2px solid #249ef5;
+            border: 2px solid #4deeea;
             width: 256px;
             height: 325px;
             max-height: 50vh;
@@ -191,7 +198,7 @@
             background-image: url(/cover.jpg);
             background-repeat: no-repeat;
             background-position: 50% 50%;
-            box-shadow: inset 0 0 .5em #249ef5aa, 0 0 .75em #249ef5aa;
+            box-shadow: inset 0 0 .5em #4deeea, 0 0 .75em #4deeea;
             border-radius: 1em;
             backdrop-filter: blur(20px);
         }
@@ -533,11 +540,11 @@
         .config-option input[type="checkbox"] {
             width: 18px;
             height: 18px;
-            accent-color: #ff4193;
+            accent-color: #f05eb7;
         }
         .config-option input[type="number"] {
-            background: rgba(0,0,0,0.3);
-            border: 1px solid #2a1759;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid #f05eb7;
             color: #fff;
             padding: 0.3em;
             border-radius: 0.3em;
@@ -589,9 +596,10 @@
                 <div class="config-option">
                     <label for="config-lang">
                         <span id="config-lang-label">Language:</span>
-                        <select id="config-lang" style="background: rgba(0,0,0,0.3); border: 1px solid #2a1759; color: #fff; padding: 0.3em; border-radius: 0.3em; margin-left: 0.5em;">
+                        <select id="config-lang" style="background: rgba(0,0,0,0.5); border: 1px solid #f05eb7; color: #fff; padding: 0.3em; border-radius: 0.3em; margin-left: 0.5em;">
                             <option value="en">English</option>
                             <option value="ru">Русский</option>
+                            <option value="th">ภาษาไทย</option>
                         </select>
                     </label>
                 </div>
@@ -617,12 +625,10 @@
             </div>
 
             <div class="click-to-play">
-                <button id="click-to-play-button">Click to play</button>
+                <button id="click-to-play-button">คลิกเพื่อเริ่มเกม</button>
                 <div id="demo-off-disclaimer"></div>
             </div>
         </div>
-
-        <div class="follow-container"><a id="follow" href="https://t.me/gamebase54" target="_blank">Подписывайтесь на новости и релизы</a></div>
         <div class="jsdos-key">
             <div>
                 <span><a id="cloud-saves-link" href="https://v8.js-dos.com/key" target="_blank">Cloud saves:</a></span>
